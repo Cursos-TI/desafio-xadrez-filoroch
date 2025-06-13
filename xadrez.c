@@ -12,11 +12,11 @@ int main() {
     const int movimento_rainha = 8;
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-    printf("Executando os movimentos do bispo\n");
+    printf("Executando os movimentos do bispo\n\n");
     for (int posicao = 0; posicao <= movimento_bispo; posicao++)
     {
-        posicao == 0 || posicao == 3 || posicao == 5 ? printf("Cima\n") : printf("Direita\n");
-        printf("O bispo se moveu %d\n", posicao + 1);
+        char* movimento = posicao == 0 || posicao == 3 || posicao == 5 ? "Cima\n" : "Direita\n";
+        printf("O bispo se moveu %s\n", movimento);
     }
     
     // Implementação de Movimentação da Torre
@@ -25,7 +25,7 @@ int main() {
     for (int posicao = 0; posicao <= movimento_torre; posicao++)
     {
         printf("Direita");
-        printf("A torre se moveu %d\n", posicao + 1);
+        printf("[%d] A torre se moveu %d\n", posicao, posicao + 1);
     }
     // Implementação de Movimentação da Rainha
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.

@@ -16,24 +16,24 @@ int main() {
     for (int posicao = 0; posicao <= movimento_bispo; posicao++)
     {
         char* movimento = posicao == 0 || posicao == 3 || posicao == 5 ? "Cima\n" : "Direita\n";
-        printf("O bispo se moveu %s\n", movimento);
+        printf("[%d] O bispo se moveu %s", posicao, movimento);
     }
     
     // Implementação de Movimentação da Torre
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
-    printf("Executando os movimentos da torre\n");
+    printf("\nExecutando os movimentos da torre\n\n");
     for (int posicao = 0; posicao <= movimento_torre; posicao++)
     {
-        printf("Direita");
-        printf("[%d] A torre se moveu %d\n", posicao, posicao + 1);
+        char* movimento = "Direita";
+        printf("[%d] A torre se moveu %s\n", posicao, movimento);
     }
     // Implementação de Movimentação da Rainha
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
-    printf("Executando os movimentos da Rainha");
+    printf("\nExecutando os movimentos da Rainha\n\n");
     for (int posicao; posicao <= movimento_rainha; posicao++)
     {
-        posicao == 0 || posicao == 3 || posicao == 5 || posicao == 7 ? printf("Cima\n") : printf("Direita\n");
-        printf("A rainha se moveu %d\n", posicao + 1);
+        char* movimento = posicao == 0 || posicao == 2 || posicao == 4 || posicao == 6 || posicao == 8 ? "Cima\n" : "Direita\n";
+        printf("[%d] A rainha se moveu %s", posicao, movimento);
     }
     
     // Nível Aventureiro - Movimentação do Cavalo
